@@ -1,0 +1,271 @@
+
+
+body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font: size 85%;
+    margin:0px;
+}
+
+.container {
+    width: 100%;
+    background-color:lightyellow;
+}
+
+.prof
+{
+    height: 220px;
+    width:170px;
+    border-radius: 50%;
+    float: left;
+}
+/*Header Area*/
+.container header{
+    padding-top: 10px;
+    width : 100%;
+}
+
+    
+.links{
+    margin-top: 200px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.links ul{
+    margin: 0;
+    padding:0;
+    width: 100%;
+}
+
+.links li{
+    list-style: none;
+    float:left;
+    margin-right: 9px;
+}
+
+.links a{
+    font-size: 15px;
+    padding:4px;
+    text-decoration:none;
+    display:block;
+    color:green;
+    border-top: 3px solid rgb(241, 215, 181);
+    border-left: 3px solid rgb(241, 215, 181);
+    border-right: 3px solid rgb(241, 215, 181);
+    border-bottom: 3px solid rgb(241, 215, 181);
+    background-color:rgb(241, 215, 181);
+    border-radius: 10px 6px;
+    transition-property: color , background-color;
+    transition-duration:1s;
+}
+
+.links a:hover{
+    background-color: whitesmoke;
+    color: goldenrod;
+}
+/*End Of Header Area*/
+
+
+/*___________________________________________________________________________Main Content Area*/
+
+.main .centre{
+    flex:2;
+    order:1;
+}
+
+.main .centre h2{
+    text-align:center ;
+    color: black;
+}
+
+.main .centre p{
+    color: black;
+    padding-top: 10px;
+    padding-bottom:10px;
+}
+
+.main
+{
+    margin-left: 20px;
+    margin-right: 50px;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.cycle-slideshow{
+    margin-left: 170px;
+    position: relative;
+
+}
+.cycle-next{
+    position: absolute;
+    top:50%;
+    background-color: rgba(0,0, 0, 0.4);
+    color: #D69746;
+    padding: 1px,10px;
+    display:block;
+    cursor: pointer;
+    font-size: 200%;
+    z-index: 1000;
+}
+
+.cycle-pager { 
+    text-align: center; width: 100%; z-index: 500; position: absolute; top: 10px; overflow: hidden;
+}
+.cycle-pager span { 
+    font-family: arial; font-size: 20px; width: 16px; height: 16px; 
+    display: inline-block; color: #ddd; cursor: pointer; 
+}
+.cycle-pager span.cycle-pager-active { color: #D69746;}
+.cycle-pager > * { cursor: pointer;}
+
+/*_________________________________________________________SIDE BAR__________________________________________*/
+.side {
+    flex:1;
+    order:2;
+    padding:60px;
+    box-sizing: border-box;
+    background-color:  rgb(241, 215, 181);
+}
+
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+
+.social li{
+    list-style: none;
+    border: 1px solid transparent;
+    margin-bottom:5px;
+    margin-left: 0;
+}
+
+.social a{
+    text-decoration:none;
+    color:green;
+    padding:4px;
+    border-radius: 10px 6px;
+    transition-property: color , background-color;
+    transition-duration:1s;
+}
+
+.main .side p a{
+    color:green;
+} 
+
+.main .side p a:hover{
+    background-color: whitesmoke;
+    color:goldenrod;
+} 
+.social a:hover{
+    background-color: whitesmoke;
+    color:goldenrod;
+}
+
+/*___________________________________________________________END SIDE BAR________________________________________*/
+
+/*______________________________ANIMATION_________________________________________________*/
+
+
+/*Ball Animation*/
+@keyframes ball{
+    
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: translateX(600px);
+    }
+}
+
+/*Browser Compatibility*/
+@-webkit-keyframes ball{
+    
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: translateX(600px);
+    }
+}
+/*Browser Compatibility*/
+
+.ttball{
+    animation: ball 2.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    order:2;
+}
+/*ball ANimation*/
+
+@keyframes bat{
+    0%{
+        transform: rotate(-180deg);
+    }
+    50%{
+        transform: skewX(20deg);
+    }
+}
+
+@-webkit-keyframes bat{
+    0%{
+        transform: rotate(-180deg);
+    }
+    50%{
+        transform: skewX(20deg);
+    }
+}
+
+
+.ttbat{
+    animation: bat 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    order:1;
+}
+
+/*_______________________________________________END Animation_____________________________________________________*/
+/*__________________________________________End of Main Content Area*/
+
+
+/*______________________________________________Footer*/
+footer{
+    text-align:center;
+    color:black;
+    margin-bottom:10px;
+    margin-top:10px;
+    background-color: rgb(241, 215, 181);
+}
+/*___________________________________________End of Footer*/
+
+
+/*This should be included whenever you include float */
+
+.fix {
+	clear: both;
+}
+
+.group:before,
+.group:after {
+	content: "";
+	display: table;
+}
+
+.group:after {
+	clear: both;
+}
+
+.group {
+	zoom: 1;
+}
+
+
+@media screen and (max-width: 480px) {
+	
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	
+}
+
